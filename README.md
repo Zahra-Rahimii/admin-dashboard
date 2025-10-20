@@ -1,59 +1,88 @@
-# AdminDashboard
+# 🧭 Admin Dashboard (Angular 19)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+A responsive **Admin Dashboard** built with **Angular 19**, **Angular Material**, and **Tailwind CSS**.  
+The app provides modular pages for managing users, products, orders, and admin settings, with authentication and route protection.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
+
+- 📊 **Dashboard:** Overview cards for users, products, and orders with charts  
+- 👥 **Users:** List, search, edit, delete, and add users via reactive forms  
+- 🛍️ **Products:** Display, filter, and manage products (CRUD operations)  
+- 📦 **Orders:** View order list and details, update order status  
+- ⚙️ **Settings:** Update admin name/email, switch between dark/light theme, logout  
+- 🔐 **Login:** Reactive form with token stored in `localStorage`, route protection via `AuthGuard`
+
+---
+
+
+## 🛠️ Tech Stack
+
+- **Angular 19**
+- **TypeScript 5**
+- **Angular Material**
+- **Tailwind CSS**
+- **Chart.js 4** + **ng2-charts 6**
+- **Reactive Forms**
+- **Routing + Auth Guard**
+- **JSON Server (Express) for Orders**
+
+---
+
+## 📦 Dependencies
+
+| Package | Version | Role |
+|----------|---------|------|
+| @angular/core | 19.2.15 | Angular framework core |
+| @angular/material | 19.2.19 | Material Design UI components |
+| @angular/animations | 19.2.15 | Angular animations |
+| @angular/forms | 19.2.15 | Reactive and template-driven forms |
+| @angular/router | 19.2.15 | Routing management |
+| chart.js | 4.4.0 | Charting library |
+| ng2-charts | 6.0.1 | Angular wrapper for Chart.js |
+| tailwindcss | 3.4.18 | Utility-first CSS framework |
+| express | 4.21.2 | JSON Server / mock API for orders |
+| rxjs | 7.8.2 | Reactive programming library |
+| typescript | 5.7.3 | TypeScript language |
+
+> ⚙️ To view exact installed versions, run:
+> ```bash
+> npm list --depth=0
+> ```
+
+---
+
+## ⚙️ Installation & Run
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/Zahra-Rahimii/admin-dashboard.git
+
+# 2. Navigate to the project folder
+cd admin-dashboard
+
+# 3. Install dependencies
+npm install
+
+# 4. Run Angular app
 ng serve
-```
+Open your browser and go to 👉 http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🧰 JSON Server (Fake API for Orders)
+bash
+Copy code
+# Run JSON server
+npm run server
+By default, it runs on:
+👉 http://localhost:3000/orders
 
-## Code scaffolding
+🔹 Make sure the server is running before accessing Orders page.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🤝 Contributors
+Name	Role	Features
+Zahra Rahimi	Frontend Developer	Products, Orders, Settings
+Roghayeh Abbasi	Frontend Developer	Dashboard, Users, Login
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📅 Project Status
+🚧 In Progress – Core logic and most UI implemented, ongoing styling and optimization.
